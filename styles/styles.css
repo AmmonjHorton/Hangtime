@@ -11,15 +11,15 @@
     --paragraph-font: "DM Sans", Helvetica, sans-serif;
   
     /* these colors below should be chosen from among your palette colors above */
-    --headline-color-on-white: ;  /* headlines on a white background */ 
-    --headline-color-on-color: #ea3342; /* headlines on a colored background */ 
-    --paragraph-color-on-white: #1c246d; /* paragraph text on a white background */ 
-    --paragraph-color-on-color: #FFECD1; /* paragraph text on a colored background */ 
-    --paragraph-background-color: #1c246d;
-    --nav-link-color: #28930b;
-    --nav-background-color: #1c246d;
-    --nav-hover-link-color: #1c246d;
-    --nav-hover-background-color: #ea3342;
+    --headline-color-on-white: (var(--rich-black)) ;  /* headlines on a white background */ 
+    --headline-color-on-color: (var(--white)); /* headlines on a colored background */ 
+    --paragraph-color-on-white: (var(--rich-black)); /* paragraph text on a white background */ 
+    --paragraph-color-on-color: (var(--white)); /* paragraph text on a colored background */ 
+    --paragraph-background-color: (var(--dark-orange-web));
+    --nav-link-color: (var(--penn-blue));
+    --nav-background-color: (var(--dark-orange-web));
+    --nav-hover-link-color: (var(--rich-black));
+    --nav-hover-background-color: (var(--white));
   }
 
 #content {
@@ -77,8 +77,8 @@ main section img {
     margin-top: -200px;
 }
 body {
-    background-color: #1c246d;
-    color: #FFECD1;
+    background-color: (var(--rich-black));
+    color: (var(--white));
     padding: 0;
     margin: 0;
 }
@@ -89,15 +89,15 @@ header {
 }
 nav a {
     text-align: center;
-    color: #ea3342;
+    color: (var(--white));
     text-decoration: none;
     padding: 35px;
     justify-content: space-around;
     font-size: 2em;
 }
 nav a:hover {
-    color: #ea3342;
-    background-color: #1c246d;
+    color: (var(--white));
+    background-color: (var(--rich-black));
 }
 nav {
     display: flex;
@@ -106,18 +106,18 @@ nav {
     grid-column: 2/3;
 }
 .home-title {
-    color: #FFECD1;
+    color: (var(--white));
     font-size: 2em;
     margin-top: 10px;
 }
 .msg {
     font-family: "Inter", Garamond, Helvetica;
-    background-color: #1c246d;
+    background-color: (var(--rich-black));
     line-height: 1.5em;
     padding: 35px;
     grid-column: 1/11;
     grid-row: 1/2;
-    color: #FFECD1;
+    color: (var(--white));
 }
 footer {
     background-color: white;
@@ -126,31 +126,31 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: #ea3342;
+    color: (var(--white));
 }
 footer a {
     font-family: "Inter", Garamond, Helvetica;
-    color: #ea3342;
+    color: (var(--white));
     text-decoration: none;
 }
 footer a:hover {
-    color: #ea3342;
-    background-color: #1c246d;
+    color: (var(--white));
+    background-color: (var(--rich-black));
     padding: 15px;
 }
 h2 {
     font-family: "Irish Grover", Helvetica, sans-serif;
     text-align: center;
-    color: #FFECD1;
+    color: (var(--white));
     padding: 10px;
     margin: 0;
 }
 .msg p {
     font-family: "Inter", Garamond, Helvetica;
-    color: #FFECD1;
+    color: (var(--white));
     font-size: 1.2em;
     padding: 15px;
-    box-shadow: 5px 5px 10px #ea3342;
+    box-shadow: 5px 5px 10px (var(--white));
     border: 5px solid black;
 }
 footer p a:hover {
@@ -160,8 +160,8 @@ a.logo_link {
     padding-top: 5px;
     justify-self: center;
     align-self: center;
-    background-color: #ea3342;
-    color: #28930b;
+    background-color: (var(--white));
+    color: var(--penn-blue);
 }
 footer .social img {
     padding-top: 15px;
@@ -170,7 +170,7 @@ footer .social img {
 .card-img {
     border: 10px solid #001524;
     transition: transform .5s;
-    box-shadow: 5px 5px 10px #ea3342;
+    box-shadow: 5px 5px 10px (var(--white));
     width: 100%;
 }
 .card-img:hover {
@@ -183,8 +183,8 @@ main.home-grid {
 }
 #welcome-msg {
     width: 100%;
-    color: #1c246d;
-    background: #ea3342;
+    color: (var(--rich-black));
+    background: (var(--white));
     border: 3px solid black;
     margin-top: 150px;
     z-index: 2;
