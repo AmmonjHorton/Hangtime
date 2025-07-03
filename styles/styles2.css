@@ -1,0 +1,144 @@
+/* styles/site-plan.css */
+
+:root {
+    --dark-orange-web: #f98c0fff;
+    --rich-black: #151b29ff;
+    --davy-grey: #555555ff;
+    --white: #ffffffff;
+    --penn-blue: #0d245aff;
+}
+
+body {
+    background-color: var(--dark-orange-web);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--penn-blue);
+    padding: 20px;
+}
+
+header h1, header h2 {
+    color: var(--white);
+    margin: 0;
+    padding: 5px 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+hr {
+    border: 1px solid var(--dark-orange-web);
+    margin: 20px auto;
+    width: 80%;
+}
+
+h1 {
+    font-family: 'Pirata One', cursive;
+    color: var(--white);
+    font-size: 2.5em;
+}
+
+h2, h3, h4 {
+    font-family: 'Pirata One', cursive;
+    color: var(--davy-grey);
+}
+
+a {
+    color: var(--davy-grey);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+/* Color Table */
+.colors {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.colors td {
+    width: 25%;
+    height: 50px;
+    border: 1px solid var(--penn-blue);
+}
+
+.primary {
+    background-color: var(--dark-orange-web);
+}
+
+.secondary {
+    background-color: var(--davy-grey);
+}
+
+.accent1 {
+    background-color: var(--penn-blue);
+}
+
+.accent2 {
+    background-color: var(--white);
+    color: var(--rich-black);
+}
+
+.colored {
+    background-color: var(--davy-grey);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--penn-blue);
+    padding: 10px;
+}
+
+nav a {
+    padding: 10px 20px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+/* Site Map */
+.sitemap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.sm-home, .sm-page2, .sm-page3 {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--dark-orange-web);
+    border-radius: 5px;
+}
+
+.top, .left, .right {
+    width: 30%;
+    margin: 10px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Wireframes section */
+.wireframes img {
+    border: 1px solid var(--dark-orange-web);
+    margin: 20px auto;
+}
