@@ -87,3 +87,5 @@ nextMonthBtn.addEventListener('click', () => {
 
 
 renderCalendar(); // Initial render
+
+// Code written by Google Gemini
