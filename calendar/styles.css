@@ -1,17 +1,26 @@
+/* Code Provided by google Gemini */
+
+/*
+dark-orange-web: #f98c0f;
+rich-black: #151b29;
+white: #ffffff;
+penn-blue: #0d245a;
+*/
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f4f7f6;
+    background-color: white;
     margin: 0;
 }
 
 .calendar-container {
     width: 90%;
     max-width: 400px;
-    background-color: #ffffff;
+    background-color: rgba(249, 140, 15, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -31,7 +40,7 @@ body {
 }
 
 .nav-button {
-    background-color: #007bff;
+    background-color: #0d245a;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -55,7 +64,7 @@ body {
 
 .calendar-weekdays div {
     font-weight: bold;
-    color: #666;
+    color: #151b29;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
 }
@@ -78,16 +87,16 @@ body {
 }
 
 .calendar-days .day.current-month {
-    color: #333;
+    color: #0d245a;
 }
 
 .calendar-days .day.other-month {
-    color: #bbb;
+    color: #ffffff;
     pointer-events: none; /* Make dates from other months not clickable */
 }
 
 .calendar-days .day.today {
-    background-color: #007bff;
+    background-color: #0d245a;
     color: white;
     font-weight: bold;
 }
@@ -112,7 +121,8 @@ body {
 
 /* Optional: Styles for selected day (requires JS to apply class) */
 .calendar-days .day.selected {
-    background-color: #28a745;
+    background-color: #f98c0f;
     color: white;
     font-weight: bold;
+    border: 1px white;
 }
