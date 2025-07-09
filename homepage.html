@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hangtime">
+    <meta name="description" content="Hangtime">
+    <title>Hangtime</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script defer src="homepage.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Hangtime</h1>
+        </div>
+        <form action="/search" method="GET">
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="q" placeholder="Type to search...">
+            <button type="submit">Search</button>
+        </form>
+        <button class="profile-toggle">
+            <img src="/images/profileImage.png" alt="Profile Outline" width="35" height="35">
+        </button>
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        <nav>
+            <ul>
+                <li><a href="#">icon1</a></li>
+                <li><a href="#">icon2</a></li>
+                <li><a href="#">icon3</a></li>
+            </ul>
+        </nav>
+        </button>
+
+    </header>
+
+
+    <main>
+        <div id="post-container" class="post-container">
+            <!-- <section id="examplePost" class="hero">
+                <img src="/images/DiscGolfImage.png" alt="Hero Image" width="400" height="400">   
+                <div class="button-group">
+                    <button id="info">Learn More</button>
+                    <p id="examplePostAbout">Im looking for a group of 4 people to join me in a game of disc golf! It will be at 4pm on Tuesday at Nature Park</p>
+                    <button id="save">save</button>
+                    <button id="chat">chat</button>
+                    <button id="nextEvent">Next</button>
+                </div>
+            </section> -->
+        </div>
+
+        <section>
+            <button id="create-post" class="create-post-button">Create Post</button>
+        </section>
+
+        <section>
+            <button id="savedEvents">Saved Events</button>
+        </section>
+
+    <div class="create-post-section hide" id="create-post-section">
+        <h2>Create an Event Post</h2>
+
+        <form action="/submit-event" method="POST" enctype="multipart/form-data">
+        <!-- Event Description -->
+        <div>
+            <label for="eventDescription">What's the event about?</label><br>
+            <textarea id="eventDescription" name="description" rows="4" cols="50" placeholder="Describe your event..."></textarea>
+        </div>
+
+        <!-- Date Picker -->
+        <div>
+            <label for="eventDate">Date of the event:</label><br>
+            <input type="date" id="eventDate" name="date">
+        </div>
+
+        <!-- Time Dropdown -->
+        <div>
+            <label for="eventTime">Time of the event:</label><br>
+            <select id="eventTime" name="time">
+                <option value="">Select a time</option>
+                <option value="00:00">12:00 AM</option>
+                <option value="01:00">1:00 AM</option>
+                <option value="02:00">2:00 AM</option>
+                <option value="03:00">3:00 AM</option>
+                <option value="04:00">4:00 AM</option>
+                <option value="05:00">5:00 AM</option>
+                <option value="06:00">6:00 AM</option>
+                <option value="07:00">7:00 AM</option>
+                <option value="08:00">8:00 AM</option>
+                <option value="09:00">9:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="20:00">8:00 PM</option>
+                <option value="21:00">9:00 PM</option>
+                <option value="22:00">10:00 PM</option>
+                <option value="23:00">11:00 PM</option>
+            </select>
+        </div>
+
+        <!-- Image Upload -->
+        <div>
+            <label for="imageUpload" style="cursor: pointer;">
+            📷 Add Image
+            </label>
+            <input type="file" id="imageUpload" name="image" accept="image/*" style="display: none;">
+        </div>
+
+        <!-- Submit -->
+        <div>
+            <button type="submit" id="submit-button">Post Event</button>
+        </div>
+        </form>
+        <button id="close-viewer">X</button>
+    </div>
+    </main>
+
+
+    <footer>
+
+    </footer>
+</body> 
+</html>
