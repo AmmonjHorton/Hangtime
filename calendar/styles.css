@@ -1,0 +1,132 @@
+/* Code Provided by google Gemini */
+
+/*
+dark-orange-web: #f98c0f;
+rich-black: #151b29;
+white: #ffffff;
+penn-blue: #0d245a;
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+    margin: 0;
+}
+
+.calendar-container {
+    width: 90%;
+    max-width: 500px;
+    background-color: rgba(249, 140, 15, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.nav-button {
+    background-color: #0d245a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-weekdays div {
+    font-weight: bold;
+    color: #151b29;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-days {
+    margin-top: 10px;
+}
+
+.calendar-days .day {
+    padding: 10px 0px 15px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: #333;
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    aspect-ratio: 1 / 1; /* Make days square */
+    user-select: none; /* Prevent text selection */
+}
+
+.calendar-days .day:hover {
+    background-color: #e9e9e9;
+}
+
+.calendar-days .day.current-month {
+    color: #0d245a;
+}
+
+.calendar-days .day.other-month {
+    color: #ffffff;
+    pointer-events: none; /* Make dates from other months not clickable */
+}
+
+.calendar-days .day.today {
+    background-color: #0d245a;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-days .day.has-event {
+    position: relative;
+    color: #007bff; /* Or a different color to indicate event */
+    font-weight: bold;
+}
+
+.calendar-days .day.has-event::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #ffc107; /* Event indicator color */
+    border-radius: 50%;
+}
+
+/* Optional: Styles for selected day (requires JS to apply class) */
+.calendar-days .day.selected {
+    background-color: #f98c0f;
+    color: white;
+    font-weight: bold;
+    border: 1px white;
+}

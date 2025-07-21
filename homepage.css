@@ -1,0 +1,228 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: var(--paragraph-background-color, #f98c0fff);
+  color: var(--headline-color-on-color, #0d245aff);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* 0d245aff */
+}
+
+/* Logo styling */
+header .logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: var(--heading-font, sans-serif);
+}
+
+/* Search form inside header */
+header form {
+  flex-grow: 1;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header input[type="text"] {
+  flex-grow: 1;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+header button[type="submit"] {
+  padding: 0.4rem 0.8rem;
+  background-color: var(--accent1-color, #0d245aff);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Profile and menu buttons */
+header .profile-toggle,
+header .menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+
+/* Optional: icon nav styling */
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+header nav li {
+  display: inline;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--nav-link-color, #0d245aff);
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: var(--nav-hover-link-color, #0d245aff);
+}
+
+
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: rgba(248, 245, 240, 0.931);
+}
+
+/* Container for the hero post area */
+.hero {
+  position: relative;
+  width: 500px;
+  margin: 2rem auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Main image */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Right-side icon bar */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: -2.5rem; /* Pull it outside the container visually */
+  width: 40px;
+  height: 90%;
+}
+
+nav ul {
+  position: absolute;
+  top: 1rem;
+  right: -3.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+}
+
+nav ul a {
+  text-decoration: none;
+  background: #eee;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Button group under image */
+.button-group {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button-group button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #0d245aff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-post,
+.create-post-button{
+position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.75rem 1.25rem;
+  background-color: #0d245aff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#savedEvents {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  padding: 0.75rem 1.25rem;
+  background-color: #0d245aff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Create Post Form Section */
+.create-post-section {
+  margin: 3rem auto;
+  /* padding: 2rem; */
+  position: fixed;
+  bottom: 20px;   /* distance from bottom */
+  left: 30px;    /* distance from right */
+  padding: 10px 20px;
+  max-height: 600px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.create-post-section form > div {
+  margin-bottom: 1.5rem;
+}
+
+
+.create-post-section textarea,
+.create-post-section input,
+.create-post-section select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+/* this needs to be worked on */
+.close{
+  background-color: #2c2c2a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.create-post-section button[type="submit"] {
+  background-color: #2c2c2a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
